@@ -3,7 +3,7 @@ pipeline {
 
     // Define the environment variables
     environment {
-        GIT_BRANCH = 'main' // Change this to the desired branch name
+        GIT_BRANCH = 'master' // Change this to the desired branch name
     }
     // running container stop
     stages {
@@ -24,7 +24,7 @@ pipeline {
         stage('Git Pull') {
             when {
                 // Trigger the stage only when changes are pushed to the main branch
-                branch 'main'
+                branch 'master'
                 changeset '.*'
             }
             steps {
